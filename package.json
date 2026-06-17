@@ -8,7 +8,6 @@
     "last 2 versions"
   ],
   "scripts": {
-    
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint --fix --ext .js,.vue"
@@ -42,6 +41,7 @@
     "webpack-dev-server": "^4.0.0-beta.0"
   },
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "vue": "^3.0.7",
     "vue-router": "^4.6.4"
   }
