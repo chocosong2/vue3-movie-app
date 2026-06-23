@@ -8,7 +8,7 @@ export default {
     //data
     state: () => ({
         movies:[],
-        message:'',
+        message:'Search for the movie title!',
         loading: false
     }),
     //computed
@@ -28,6 +28,13 @@ export default {
     },
     actions:{
         async searchMovies({state, commit}, payload){
+            if(state.loading){
+                return
+            }
+            commit('updateState', {
+                message:'',
+                loading: true 
+            })
             try{
                 const OMDB_API_KEY = '7035c60c' 
                 const res = await _fetchMovie({
@@ -65,8 +72,11 @@ export default {
                     movies: [],
                     message
                 })
+            }finally{
+                commit('updateState',{
+                    loading: false
+                })
             }
-
         }
     },
 }
