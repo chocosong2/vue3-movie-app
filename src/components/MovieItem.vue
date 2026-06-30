@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
+// @import "~/scss/main";
 .movie {
     $width: 168px;
     width: $width;
