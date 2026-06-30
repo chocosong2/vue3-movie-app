@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "dev": "set NODE_OPTIONS=--openssl-legacy-provider && webpack-dev-server --mode development",
+    "dev:netlify":"netlify dev",
     "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode production",
     "lint": "eslint --fix --ext .js,.vue"
   },
